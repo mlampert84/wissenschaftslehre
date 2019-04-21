@@ -1,0 +1,51 @@
+@import "~purecss/build/pure.css";
+
+$text-color: white;
+
+body {
+    background-color: #ddd;
+}
+
+.pageTitle {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    color: $text-color;
+    font-size: 1.5em !important;
+    margin: 5px;
+}
+
+.pageSubtitle {
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    color: $text-color;
+}
+
+li {
+    &.nav {
+        height: 60px;
+        background-color: #005b96;
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        ul {
+            // background-color: yellow;
+            color: white;
+            padding: 20px 30px;
+            margin: 0px;
+
+            &:hover {
+                background-color: #6497b1;
+                cursor: pointer;
+            }
+
+            &.selected {
+                color: red;
+            }
+        }
+    }
+}

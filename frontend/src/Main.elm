@@ -62,9 +62,22 @@ update message model =
 -- ---------------------------
 
 
+selectedNavItem : Page -> Page -> Attribute Msg
+selectedNavItem page model =
+    classList [ ( "selected", page == model ) ]
+
+
 view : Model -> Html Msg
 view model =
-    div [] [ text "Hello there" ]
+    div []
+        [ h1 [ class "pageTitle" ] [ text "Wissenschaftslehre" ]
+        , h3 [ class "pageSubtitle" ] [ text "A Commentary" ]
+        , li [ class "nav" ]
+            [ ul [ selectedNavItem model.page Overview ] [ text "Overview" ]
+            , ul [ selectedNavItem model.page Text ] [ text "Text" ]
+            , ul [ selectedNavItem model.page About ] [ text "About" ]
+            ]
+        ]
 
 
 
