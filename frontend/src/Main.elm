@@ -7,6 +7,7 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http exposing (Error(..))
 import Json.Decode as Decode
+import Overview
 
 
 
@@ -67,16 +68,22 @@ selectedNavItem page model =
     classList [ ( "selected", page == model ) ]
 
 
+mainMarkdown : Model -> Html Msg
+mainMarkdown m =
+    Overview.view
+
+
 view : Model -> Html Msg
 view model =
     div []
         [ h1 [ class "pageTitle" ] [ text "Wissenschaftslehre" ]
         , h3 [ class "pageSubtitle" ] [ text "A Commentary" ]
         , li [ class "nav" ]
-            [ ul [ selectedNavItem model.page Overview ] [ text "Overview" ]
-            , ul [ selectedNavItem model.page Text ] [ text "Text" ]
-            , ul [ selectedNavItem model.page About ] [ text "About" ]
+            [ ul [ selectedNavItem model.page Overview, onClick ToOverview ] [ text "Overview" ]
+            , ul [ selectedNavItem model.page Text, onClick ToText ] [ text "Text" ]
+            , ul [ selectedNavItem model.page About, onClick ToAbout ] [ text "About" ]
             ]
+        , mainMarkdown model
         ]
 
 
