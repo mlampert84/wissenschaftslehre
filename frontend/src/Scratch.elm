@@ -1,4 +1,9 @@
-module Main exposing (bottomSplits, firstLevelLine, firstSplit, secondLevelLines, secondSplit, secondSplitHeight, thirdLevelLines, thirdSplitHeight, thirdSplits)
+module Scratch exposing (bottomSplits, firstLevelLine, firstSplit, secondLevelLines, secondSplit, secondSplitHeight, thirdLevelLines, thirdSplitHeight, thirdSplits)
+
+
+type Node
+    = Node Point Node Node
+    | Leaf Point
 
 
 firstSplit : Point

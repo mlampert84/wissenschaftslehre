@@ -28,23 +28,52 @@ type alias Leaf =
 
 
 type Tree
-    = Node Point Tree Tree
-    | Leaf Point
+    = Node Point (Maybe String) Tree Tree
+    | Leaf Point (Maybe String)
 
 
-newPointLeft : Point -> Delta -> Point
-newPointLeft point delta =
-    Point (point.x - delta.deltaX) (point.y - delta.deltaY)
+leftPoint : Point -> Delta -> Point
+leftPoint point delta =
+    Point (point.x - delta.deltaX) (point.y + delta.deltaY)
 
 
-newPointRight : Point -> Delta -> Point
-newPointRight point delta =
-    Point (point.x + delta.deltaX) (point.y - delta.deltaY)
+rightPoint : Point -> Delta -> Point
+rightPoint point delta =
+    Point (point.x + delta.deltaX) (point.y + delta.deltaY)
 
 
-makeTree : Point -> Delta -> Tree
-makeTree point delta =
-    Node point (Leaf (newPointLeft point delta)) (Leaf (newPointRight point delta))
+
+--Makes a tree of depth 1
+
+
+theLabels : List ( String, String )
+theLabels =
+    [ ( "Causality", "Substance" )
+    , ( "Exchange", "Independent Activity" )
+    , ( "Matter", "Form" )
+    ]
+
+
+makeTree : Point -> Maybe String -> List ( String, String ) -> List Delta -> Tree
+makeTree point label futureLabels deltas =
+    let
+        ( text1, text2, texts ) =
+            case futureLabels of
+                [] ->
+                    ( Nothing, Nothing, [] )
+
+                ( txt1, txt2 ) :: txts ->
+                    ( Just txt1, Just txt2, txts )
+    in
+    case deltas of
+        [] ->
+            Leaf point label
+
+        x :: xs ->
+            Node point
+                label
+                (makeTree (leftPoint point x) text1 texts xs)
+                (makeTree (rightPoint point x) text2 texts xs)
 
 
 type alias Line =
@@ -58,80 +87,49 @@ makeLines tree =
     let
         treeRecurse point subTree =
             case subTree of
-                Leaf subPoint ->
+                Leaf subPoint _ ->
                     [ Line point subPoint ]
 
-                Node subPoint subT1 subT2 ->
-                    treeRecurse subPoint subT1 ++ treeRecurse subPoint subT1
+                Node subPoint text subT1 subT2 ->
+                    [ Line point subPoint ]
+                        ++ treeRecurse subPoint subT1
+                        ++ treeRecurse subPoint subT2
     in
     case tree of
-        Leaf _ ->
+        Leaf _ _ ->
             []
 
-        Node p t1 t2 ->
+        Node p text t1 t2 ->
             treeRecurse p t1 ++ treeRecurse p t2
 
 
+type alias Label =
+    { point : Point
+    , text : String
+    }
 
--- makeLines : Tree -> List Line
--- makeLines tree = case tree of
---         Leaf _ -> []
+
+makeLabels : Tree -> List Label
+makeLabels tree =
+    case tree of
+        Leaf point (Just label) ->
+            [ Label point label ]
+
+        Leaf _ Nothing ->
+            []
+
+        Node point (Just label) t1 t2 ->
+            [ Label point label ]
+                ++ makeLabels t1
+                ++ makeLabels t2
+
+        Node _ Nothing t1 t2 ->
+            makeLabels t1 ++ makeLabels t2
 
 
 size : Dimension
 size =
-    Dimension 96 96
-
-
-firstSplit : Point
-firstSplit =
-    Point (size.width // 2) 0
-
-
-secondSplitHeight : Int
-secondSplitHeight =
-    size.height // 6
-
-
-thirdSplitHeight : Int
-thirdSplitHeight =
-    size.height // 3
-
-
-secondSplit : Point
-secondSplit =
-    Point (size.width // 4) secondSplitHeight
-
-
-firstLevelLine : Line
-firstLevelLine =
-    Line firstSplit secondSplit
-
-
-thirdSplits : List Point
-thirdSplits =
-    [ Point (size.width * 2 // 16) thirdSplitHeight
-    , Point (size.width * 6 // 16) thirdSplitHeight
-    ]
-
-
-secondLevelLines : List Line
-secondLevelLines =
-    List.Extra.lift2 Line [ secondSplit ] thirdSplits
-
-
-bottomSplits : List Point
-bottomSplits =
-    let
-        makePoint fraction =
-            Point (size.width * fraction // 16) (size.height // 2)
-    in
-    List.map makePoint [ 1, 3, 5, 7 ]
-
-
-thirdLevelLines : List Line
-thirdLevelLines =
-    List.Extra.lift2 Line thirdSplits bottomSplits
+    Dimension 126 96
 
 
 dimensionsToString : String
@@ -140,6 +138,19 @@ dimensionsToString =
         ++ String.fromInt size.width
         ++ " "
         ++ String.fromInt size.height
+
+
+svgLabel : Label -> Svg msg
+svgLabel label =
+    Svg.text_
+        [ Attributes.x (String.fromInt label.point.x)
+        , Attributes.y (String.fromInt label.point.y)
+        , Attributes.dy "2"
+        , Attributes.textAnchor "middle"
+        , Attributes.fontSize "3"
+        , Attributes.fill "black"
+        ]
+        [ text label.text ]
 
 
 blackLine : Line -> Svg msg
@@ -154,16 +165,46 @@ blackLine line =
         []
 
 
+theDeltas : List Delta
+theDeltas =
+    [ Delta (size.width // 4) (size.height // 8)
+    , Delta (size.width // 8) (size.height // 6)
+    , Delta (size.width // 16) (size.height // 5)
+    ]
+
+
+theTree : Tree
+theTree =
+    makeTree (Point (size.width // 2) 0) Nothing theLabels theDeltas
+
+
+flipLinesVertical : List Line -> List Line
+flipLinesVertical lines =
+    let
+        flipLine l =
+            let
+                flipPoint p =
+                    let
+                        midLine =
+                            size.height // 2
+                    in
+                    Point p.x ((midLine - p.y) + midLine)
+            in
+            Line (flipPoint l.start) (flipPoint l.end)
+    in
+    List.map flipLine lines
+
+
 diagram : Svg msg
 diagram =
     svg
-        [ width "400"
-        , height "400"
+        [ width "800"
+        , height "800"
         , viewBox dimensionsToString
         ]
-        ([ blackLine firstLevelLine ]
-            ++ List.map blackLine secondLevelLines
-            ++ List.map blackLine thirdLevelLines
+        ((List.map blackLine << makeLines <| theTree)
+            ++ (List.map blackLine << flipLinesVertical << makeLines <| theTree)
+            ++ (List.map svgLabel << makeLabels <| theTree)
         )
 
 
