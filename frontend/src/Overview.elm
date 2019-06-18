@@ -1,5 +1,6 @@
 module Overview exposing (view)
 
+import CircularPath
 import ESynthesis
 import Html exposing (..)
 import Html.Attributes exposing (..)
@@ -34,5 +35,6 @@ view =
         [ p [] (italicizeText introduction)
         , h2 [] [ text "Overall plan of the Wissenschaftslehre" ]
         , h2 [] [ text "Put SVG here." ]
+        , CircularPath.diagram
         , ESynthesis.diagram
         ]

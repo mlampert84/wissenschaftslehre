@@ -1,6 +1,5 @@
 module ESynthesis exposing (diagram)
 
-import List.Extra
 import Svg exposing (..)
 import Svg.Attributes as Attributes exposing (..)
 
@@ -129,7 +128,7 @@ makeLabels tree =
 
 size : Dimension
 size =
-    Dimension 126 96
+    Dimension 120 96
 
 
 dimensionsToString : String
@@ -140,12 +139,36 @@ dimensionsToString =
         ++ String.fromInt size.height
 
 
-svgLabel : Label -> Svg msg
-svgLabel label =
+svgLabel : Int -> Label -> Svg msg
+svgLabel offset label =
+    let
+        dy =
+            case label.text of
+                "Matter" ->
+                    2
+
+                "Form" ->
+                    2
+
+                otherwise ->
+                    offset
+
+        dx =
+            case label.text of
+                "Causality" ->
+                    -2
+
+                "Substance" ->
+                    2
+
+                otherwise ->
+                    0
+    in
     Svg.text_
         [ Attributes.x (String.fromInt label.point.x)
         , Attributes.y (String.fromInt label.point.y)
-        , Attributes.dy "2"
+        , Attributes.dy (String.fromInt dy)
+        , Attributes.dx (String.fromInt dx)
         , Attributes.textAnchor "middle"
         , Attributes.fontSize "3"
         , Attributes.fill "black"
@@ -160,6 +183,7 @@ blackLine line =
         , Attributes.y1 (String.fromInt line.start.y)
         , Attributes.x2 (String.fromInt line.end.x)
         , Attributes.y2 (String.fromInt line.end.y)
+        , Attributes.strokeWidth "0.25"
         , stroke "black"
         ]
         []
@@ -167,9 +191,9 @@ blackLine line =
 
 theDeltas : List Delta
 theDeltas =
-    [ Delta (size.width // 4) (size.height // 8)
+    [ Delta (size.width // 4) (size.height // 9)
     , Delta (size.width // 8) (size.height // 6)
-    , Delta (size.width // 16) (size.height // 5)
+    , Delta (size.width // 14) (size.height // 6)
     ]
 
 
@@ -178,33 +202,53 @@ theTree =
     makeTree (Point (size.width // 2) 0) Nothing theLabels theDeltas
 
 
+
+-- The midline is determined by theDeltas, even though I didn't dynamically code it.
+
+
+flipPoint : Point -> Point
+flipPoint p =
+    let
+        midLine =
+            size.height // 9 + size.height // 6 + size.height // 6 + 1
+    in
+    Point p.x ((midLine - p.y) + midLine)
+
+
 flipLinesVertical : List Line -> List Line
 flipLinesVertical lines =
     let
         flipLine l =
-            let
-                flipPoint p =
-                    let
-                        midLine =
-                            size.height // 2
-                    in
-                    Point p.x ((midLine - p.y) + midLine)
-            in
             Line (flipPoint l.start) (flipPoint l.end)
     in
     List.map flipLine lines
 
 
+flipLabel : Label -> Label
+flipLabel label =
+    { label | point = flipPoint label.point }
+
+
+flipLabelsVertical : List Label -> List Label
+flipLabelsVertical labels =
+    let
+        filterFunc label =
+            label.text /= "Matter" && label.text /= "Form"
+    in
+    List.map flipLabel << List.filter filterFunc <| labels
+
+
 diagram : Svg msg
 diagram =
     svg
-        [ width "800"
-        , height "800"
+        [ width "600"
+        , height "600"
         , viewBox dimensionsToString
         ]
         ((List.map blackLine << makeLines <| theTree)
             ++ (List.map blackLine << flipLinesVertical << makeLines <| theTree)
-            ++ (List.map svgLabel << makeLabels <| theTree)
+            ++ (List.map (svgLabel -1) << makeLabels <| theTree)
+            ++ (List.map (svgLabel 2) << flipLabelsVertical << makeLabels <| theTree)
         )
 
 

@@ -1,13 +1,17 @@
 port module Main exposing (Model, Msg(..), Page(..), init, main, update, view)
 
+import About
 import Browser
 import Browser.Navigation as Nav
+import Glossary
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http exposing (Error(..))
 import Json.Decode as Decode
 import Overview
+import Text
+import Url exposing (Url)
 
 
 
@@ -24,11 +28,12 @@ type alias Model =
 type Page
     = Overview
     | Text
+    | Glossary
     | About
 
 
-init : Int -> ( Model, Cmd Msg )
-init flags =
+init : Int -> Url -> Nav.Key -> ( Model, Cmd Msg )
+init key url flags =
     ( { page = Overview }, Cmd.none )
 
 
@@ -42,6 +47,9 @@ type Msg
     = ToOverview
     | ToText
     | ToAbout
+    | ToGlossary
+    | ClickedLink Browser.UrlRequest
+    | ChangedUrl Url
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -55,6 +63,12 @@ update message model =
 
         ToAbout ->
             ( { page = About }, Cmd.none )
+
+        ToGlossary ->
+            ( { page = Glossary }, Cmd.none )
+
+        _ ->
+            ( model, Cmd.none )
 
 
 
@@ -70,7 +84,18 @@ selectedNavItem page model =
 
 mainMarkdown : Model -> Html Msg
 mainMarkdown m =
-    Overview.view
+    case m.page of
+        Overview ->
+            Overview.view
+
+        Text ->
+            Text.view
+
+        Glossary ->
+            Glossary.view
+
+        About ->
+            About.view
 
 
 view : Model -> Html Msg
@@ -81,6 +106,7 @@ view model =
         , li [ class "nav" ]
             [ ul [ selectedNavItem model.page Overview, onClick ToOverview ] [ text "Overview" ]
             , ul [ selectedNavItem model.page Text, onClick ToText ] [ text "Text" ]
+            , ul [ selectedNavItem model.page Glossary, onClick ToGlossary ] [ text "Glossary" ]
             , ul [ selectedNavItem model.page About, onClick ToAbout ] [ text "About" ]
             ]
         , mainMarkdown model
@@ -95,7 +121,7 @@ view model =
 
 main : Program Int Model Msg
 main =
-    Browser.document
+    Browser.application
         { init = init
         , update = update
         , view =
@@ -104,4 +130,6 @@ main =
                 , body = [ view m ]
                 }
         , subscriptions = \_ -> Sub.none
+        , onUrlRequest = ClickedLink
+        , onUrlChange = ChangedUrl
         }
