@@ -1,4 +1,6 @@
 @import "~purecss/build/pure.css";
+@import "text";
+@import "svgText";
 
 $text-color: white;
 
@@ -22,7 +24,7 @@ body {
     color: $text-color;
 }
 
-li {
+ul {
     &.nav {
         height: 60px;
         background-color: #005b96;
@@ -32,10 +34,9 @@ li {
         margin: 0 !important;
         padding: 0 !important;
 
-        ul {
-            // background-color: yellow;
+        li {
             color: white;
-            padding: 20px 30px;
+            padding: 0px;
             margin: 0px;
 
             &:hover {
@@ -46,6 +47,18 @@ li {
             &.selected {
                 color: black;
                 background-color: #aecbec;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                vertical-align: middle;
+                padding: 0px 15px;
+                height: 60px;
+                line-height: 30px;
+                margin: auto 0px;
             }
         }
     }

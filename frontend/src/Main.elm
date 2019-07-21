@@ -3,6 +3,7 @@ port module Main exposing (Model, Msg(..), Page(..), init, main, update, view)
 import About
 import Browser
 import Browser.Navigation as Nav
+import Commentary
 import Glossary
 import Html exposing (..)
 import Html.Attributes exposing (..)
@@ -10,8 +11,9 @@ import Html.Events exposing (..)
 import Http exposing (Error(..))
 import Json.Decode as Decode
 import Overview
-import Text
+import Route exposing (Route)
 import Url exposing (Url)
+import Url.Builder
 
 
 
@@ -21,20 +23,63 @@ import Url exposing (Url)
 
 
 type alias Model =
-    { page : Page
+    { navKey : Nav.Key
+    , page : Page
+    , commentarySection : Commentary.SectionName
     }
 
 
 type Page
     = Overview
-    | Text
+    | Commentary
     | Glossary
     | About
 
 
 init : Int -> Url -> Nav.Key -> ( Model, Cmd Msg )
-init key url flags =
-    ( { page = Overview }, Cmd.none )
+init flag url key =
+    changeRouteTo (Debug.log "the parsed route" (Route.fromUrl url))
+        False
+        { navKey = key, page = Commentary, commentarySection = Commentary.ErsterTeil }
+
+
+changeRouteTo : Maybe Route -> Bool -> Model -> ( Model, Cmd Msg )
+changeRouteTo maybeRoute pushUrl model =
+    let
+        correctUrl =
+            case maybeRoute of
+                Nothing ->
+                    Route.replaceUrl model.navKey Route.Overview
+
+                otherwise ->
+                    Cmd.none
+
+        newUrl =
+            case pushUrl of
+                True ->
+                    Nav.pushUrl model.navKey (Route.maybeRouteToString maybeRoute)
+
+                False ->
+                    Cmd.none
+
+        page =
+            case maybeRoute of
+                Nothing ->
+                    Commentary
+
+                Just Route.Overview ->
+                    Commentary
+
+                Just (Route.Commentary maybeId) ->
+                    Commentary
+
+                Just Route.Glossary ->
+                    Glossary
+
+                Just Route.About ->
+                    About
+    in
+    ( { model | page = page }, Cmd.batch [ correctUrl, newUrl ] )
 
 
 
@@ -45,7 +90,7 @@ init key url flags =
 
 type Msg
     = ToOverview
-    | ToText
+    | ToCommentary
     | ToAbout
     | ToGlossary
     | ClickedLink Browser.UrlRequest
@@ -56,22 +101,33 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update message model =
     case message of
         ToOverview ->
-            ( { page = Overview }, Cmd.none )
+            ( { model | page = Overview }, Cmd.none )
 
-        ToText ->
-            ( { page = Text }, Cmd.none )
+        ToCommentary ->
+            ( { model | page = Commentary }, Cmd.none )
 
         ToAbout ->
-            ( { page = About }, Cmd.none )
+            ( { model | page = About }, Cmd.none )
 
         ToGlossary ->
-            ( { page = Glossary }, Cmd.none )
+            ( { model | page = Glossary }, Cmd.none )
 
-        _ ->
-            ( model, Cmd.none )
+        ClickedLink urlRequest ->
+            case urlRequest of
+                Browser.Internal url ->
+                    changeRouteTo (Route.fromUrl url) True model
+
+                Browser.External href ->
+                    ( model
+                    , Nav.load href
+                    )
+
+        ChangedUrl url ->
+            changeRouteTo (Route.fromUrl url) False model
 
 
 
+-- changeRouteTo (Route.fromUrl url) False model
 -- ---------------------------
 -- VIEW
 -- ---------------------------
@@ -88,8 +144,8 @@ mainMarkdown m =
         Overview ->
             Overview.view
 
-        Text ->
-            Text.view
+        Commentary ->
+            Commentary.view m.commentarySection
 
         Glossary ->
             Glossary.view
@@ -103,11 +159,18 @@ view model =
     div []
         [ h1 [ class "pageTitle" ] [ text "Wissenschaftslehre" ]
         , h3 [ class "pageSubtitle" ] [ text "A Commentary" ]
-        , li [ class "nav" ]
-            [ ul [ selectedNavItem model.page Overview, onClick ToOverview ] [ text "Overview" ]
-            , ul [ selectedNavItem model.page Text, onClick ToText ] [ text "Text" ]
-            , ul [ selectedNavItem model.page Glossary, onClick ToGlossary ] [ text "Glossary" ]
-            , ul [ selectedNavItem model.page About, onClick ToAbout ] [ text "About" ]
+        , ul [ class "nav" ]
+            [ li [ selectedNavItem model.page Overview ]
+                [ a [ href "/" ] [ text "Overview" ]
+                ]
+            , li [ selectedNavItem model.page Commentary ]
+                [ a [ href "/commentary" ] [ text "Text" ]
+                ]
+            , li [ selectedNavItem model.page Glossary ]
+                [ a [ href "/glossary" ] [ text "Glossary" ]
+                ]
+            , li [ selectedNavItem model.page About ]
+                [ a [ href "/about" ] [ text "About" ] ]
             ]
         , mainMarkdown model
         ]

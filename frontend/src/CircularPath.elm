@@ -1,26 +1,42 @@
-module CircularPath exposing (Dimension, diagram, dimensionsToString, size)
+module CircularPath exposing (diagram, initialInteraction)
 
 import Svg exposing (..)
 import Svg.Attributes as Attributes exposing (..)
+import SvgUtils exposing (Dimension, dimensionsToString, normalizeFont)
 
 
-type alias Dimension =
-    { width : Int
-    , height : Int
+type alias Point =
+    { x : Float
+    , y : Float
     }
 
 
-size : Dimension
-size =
-    Dimension 120 96
+viewBoxSize : Dimension
+viewBoxSize =
+    Dimension 400 200
 
 
-dimensionsToString : String
-dimensionsToString =
-    "0 0 "
-        ++ String.fromInt size.width
-        ++ " "
-        ++ String.fromInt size.height
+actualSize : Dimension
+actualSize =
+    Dimension 600 300
+
+
+toSvgCoord : Point -> List (Attribute msg)
+toSvgCoord point =
+    [ x (String.fromFloat (viewBoxSize.width / 2 + point.x))
+    , y (String.fromFloat (viewBoxSize.height / 2 - point.y))
+    ]
+
+
+initialInteraction : Svg msg
+initialInteraction =
+    svg
+        [ width (String.fromFloat actualSize.width)
+        , height (String.fromFloat actualSize.height)
+        , viewBox (dimensionsToString viewBoxSize)
+        , Attributes.style "background-color: pink"
+        ]
+        []
 
 
 diagram : Svg msg
@@ -28,7 +44,7 @@ diagram =
     svg
         [ width "600"
         , height "600"
-        , viewBox dimensionsToString
+        , viewBox (dimensionsToString viewBoxSize)
         ]
         [ Svg.path
             [ Attributes.stroke "red"

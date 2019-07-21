@@ -1,0 +1,43 @@
+.commentary-container {
+    // background-color: purple;
+    display: flex;
+    width: 100%;
+}
+
+.table-of-contents {
+    // background-color: green;
+
+    flex: 0 0 300px;
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: inline-block;
+                width: 300px;
+                position: relative;
+                text-overflow: ellipsis;
+                white-space: nowrap !important;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.hide-toc {
+    flex: 0 0 0px;
+}
+
+.text-and-commentary {
+    // background-color: pink;
+
+    flex: 1 1 auto;
+
+    .commentary {
+        white-space: pre-line;
+    }
+}

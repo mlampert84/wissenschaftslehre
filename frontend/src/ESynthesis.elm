@@ -10,15 +10,21 @@ type alias Dimension =
     }
 
 
+type alias Delta =
+    { deltaX : Int
+    , deltaY : Int
+    }
+
+
 type alias Point =
     { x : Int
     , y : Int
     }
 
 
-type alias Delta =
-    { deltaX : Int
-    , deltaY : Int
+type alias Line =
+    { start : Point
+    , end : Point
     }
 
 
@@ -73,12 +79,6 @@ makeTree point label futureLabels deltas =
                 label
                 (makeTree (leftPoint point x) text1 texts xs)
                 (makeTree (rightPoint point x) text2 texts xs)
-
-
-type alias Line =
-    { start : Point
-    , end : Point
-    }
 
 
 makeLines : Tree -> List Line
@@ -176,19 +176,6 @@ svgLabel offset label =
         [ text label.text ]
 
 
-blackLine : Line -> Svg msg
-blackLine line =
-    Svg.line
-        [ Attributes.x1 (String.fromInt line.start.x)
-        , Attributes.y1 (String.fromInt line.start.y)
-        , Attributes.x2 (String.fromInt line.end.x)
-        , Attributes.y2 (String.fromInt line.end.y)
-        , Attributes.strokeWidth "0.25"
-        , stroke "black"
-        ]
-        []
-
-
 theDeltas : List Delta
 theDeltas =
     [ Delta (size.width // 4) (size.height // 9)
@@ -238,6 +225,19 @@ flipLabelsVertical labels =
     List.map flipLabel << List.filter filterFunc <| labels
 
 
+blackLine : Float -> Line -> Svg msg
+blackLine width line =
+    Svg.line
+        [ Attributes.x1 (String.fromInt line.start.x)
+        , Attributes.y1 (String.fromInt line.start.y)
+        , Attributes.x2 (String.fromInt line.end.x)
+        , Attributes.y2 (String.fromInt line.end.y)
+        , Attributes.strokeWidth (String.fromFloat width)
+        , stroke "black"
+        ]
+        []
+
+
 diagram : Svg msg
 diagram =
     svg
@@ -245,8 +245,8 @@ diagram =
         , height "600"
         , viewBox dimensionsToString
         ]
-        ((List.map blackLine << makeLines <| theTree)
-            ++ (List.map blackLine << flipLinesVertical << makeLines <| theTree)
+        ((List.map (blackLine 0.25) << makeLines <| theTree)
+            ++ (List.map (blackLine 0.25) << flipLinesVertical << makeLines <| theTree)
             ++ (List.map (svgLabel -1) << makeLabels <| theTree)
             ++ (List.map (svgLabel 2) << flipLabelsVertical << makeLabels <| theTree)
         )
