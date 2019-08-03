@@ -127,7 +127,7 @@ commentary m =
                 ErsterTeil ->
                     ErsterTeil.mainText
     in
-    Markdown.toHtml [ Html.Attributes.class "markdown" ] text
+    Markdown.toHtml [ Html.Attributes.style "color" "red", Html.Attributes.class "markdown" ] text
 
 
 view : Model -> Html.Html Msg
