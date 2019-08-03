@@ -16,7 +16,8 @@
             "elm-community/list-extra": "8.2.0",
             "elm-explorations/markdown": "1.0.0",
             "ianmackenzie/elm-geometry": "1.2.1",
-            "ianmackenzie/elm-geometry-svg": "1.0.2"
+            "ianmackenzie/elm-geometry-svg": "1.0.2",
+            "mdgriffith/elm-ui": "1.1.2"
         },
         "indirect": {
             "elm/bytes": "1.0.7",

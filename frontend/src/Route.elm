@@ -12,6 +12,7 @@ type Route
     | Commentary (Maybe String)
     | Glossary
     | About
+    | ErsterTeil
 
 
 parser : Parser.Parser (Route -> a) a
@@ -61,3 +62,6 @@ routeToString page =
 
         About ->
             "about"
+
+        ErsterTeil ->
+            "erster_teil"

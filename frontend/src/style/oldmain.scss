@@ -1,0 +1,65 @@
+@import "~purecss/build/pure.css";
+@import "text";
+@import "svgText";
+
+$text-color: white;
+
+body {
+    background-color: #ddd;
+}
+
+.pageTitle {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    color: $text-color;
+    font-size: 1.5em !important;
+    margin: 5px;
+}
+
+.pageSubtitle {
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    color: $text-color;
+}
+
+ul {
+    &.nav {
+        height: 60px;
+        background-color: #005b96;
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        li {
+            color: white;
+            padding: 0px;
+            margin: 0px;
+
+            &:hover {
+                background-color: #6497b1;
+                cursor: pointer;
+            }
+
+            &.selected {
+                color: black;
+                background-color: #aecbec;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                vertical-align: middle;
+                padding: 0px 15px;
+                height: 60px;
+                line-height: 30px;
+                margin: auto 0px;
+            }
+        }
+    }
+}

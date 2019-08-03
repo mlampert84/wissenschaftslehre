@@ -1,17 +1,17 @@
-port module Main exposing (Model, Msg(..), Page(..), init, main, update, view)
+port module Main exposing (init)
 
-import About
 import Browser
 import Browser.Navigation as Nav
-import Commentary
-import Glossary
-import Html exposing (..)
-import Html.Attributes exposing (..)
-import Html.Events exposing (..)
-import Http exposing (Error(..))
-import Json.Decode as Decode
-import Overview
+import Commentary.ErsterTeil as ErsterTeil
+import Commentary.Introduction as Introduction
+import Element exposing (..)
+import Element.Background as Background
+import Html
+import Html.Attributes
+import Html.Events
+import Markdown
 import Route exposing (Route)
+import Text.TextTypes exposing (Section)
 import Url exposing (Url)
 import Url.Builder
 
@@ -25,22 +25,19 @@ import Url.Builder
 type alias Model =
     { navKey : Nav.Key
     , page : Page
-    , commentarySection : Commentary.SectionName
     }
 
 
 type Page
-    = Overview
-    | Commentary
-    | Glossary
-    | About
+    = Introduction
+    | ErsterTeil
 
 
 init : Int -> Url -> Nav.Key -> ( Model, Cmd Msg )
 init flag url key =
     changeRouteTo (Debug.log "the parsed route" (Route.fromUrl url))
         False
-        { navKey = key, page = Commentary, commentarySection = Commentary.ErsterTeil }
+        { navKey = key, page = Introduction }
 
 
 changeRouteTo : Maybe Route -> Bool -> Model -> ( Model, Cmd Msg )
@@ -64,35 +61,21 @@ changeRouteTo maybeRoute pushUrl model =
 
         page =
             case maybeRoute of
-                Nothing ->
-                    Commentary
-
                 Just Route.Overview ->
-                    Commentary
+                    Introduction
 
-                Just (Route.Commentary maybeId) ->
-                    Commentary
+                Just Route.ErsterTeil ->
+                    ErsterTeil
 
-                Just Route.Glossary ->
-                    Glossary
-
-                Just Route.About ->
-                    About
+                _ ->
+                    Introduction
     in
     ( { model | page = page }, Cmd.batch [ correctUrl, newUrl ] )
 
 
-
--- ---------------------------
--- UPDATE
--- ---------------------------
-
-
 type Msg
-    = ToOverview
-    | ToCommentary
-    | ToAbout
-    | ToGlossary
+    = ToIntroduction
+    | ToErsterTeil
     | ClickedLink Browser.UrlRequest
     | ChangedUrl Url
 
@@ -100,17 +83,11 @@ type Msg
 update : Msg -> Model -> ( Model, Cmd Msg )
 update message model =
     case message of
-        ToOverview ->
-            ( { model | page = Overview }, Cmd.none )
+        ToIntroduction ->
+            ( { model | page = Introduction }, Cmd.none )
 
-        ToCommentary ->
-            ( { model | page = Commentary }, Cmd.none )
-
-        ToAbout ->
-            ( { model | page = About }, Cmd.none )
-
-        ToGlossary ->
-            ( { model | page = Glossary }, Cmd.none )
+        ToErsterTeil ->
+            ( { model | page = ErsterTeil }, Cmd.none )
 
         ClickedLink urlRequest ->
             case urlRequest of
@@ -126,60 +103,41 @@ update message model =
             changeRouteTo (Route.fromUrl url) False model
 
 
-
--- changeRouteTo (Route.fromUrl url) False model
--- ---------------------------
--- VIEW
--- ---------------------------
-
-
-selectedNavItem : Page -> Page -> Attribute Msg
-selectedNavItem page model =
-    classList [ ( "selected", page == model ) ]
-
-
-mainMarkdown : Model -> Html Msg
-mainMarkdown m =
-    case m.page of
-        Overview ->
-            Overview.view
-
-        Commentary ->
-            Commentary.view m.commentarySection
-
-        Glossary ->
-            Glossary.view
-
-        About ->
-            About.view
+tableOfContents : Element Msg
+tableOfContents =
+    let
+        mapLink section =
+            link [] { url = "/" ++ section.id, label = text section.title }
+    in
+    column []
+        (List.map
+            mapLink
+            [ Introduction.section, ErsterTeil.section ]
+        )
 
 
-view : Model -> Html Msg
-view model =
-    div []
-        [ h1 [ class "pageTitle" ] [ text "Wissenschaftslehre" ]
-        , h3 [ class "pageSubtitle" ] [ text "A Commentary" ]
-        , ul [ class "nav" ]
-            [ li [ selectedNavItem model.page Overview ]
-                [ a [ href "/" ] [ text "Overview" ]
-                ]
-            , li [ selectedNavItem model.page Commentary ]
-                [ a [ href "/commentary" ] [ text "Text" ]
-                ]
-            , li [ selectedNavItem model.page Glossary ]
-                [ a [ href "/glossary" ] [ text "Glossary" ]
-                ]
-            , li [ selectedNavItem model.page About ]
-                [ a [ href "/about" ] [ text "About" ] ]
+commentary : Model -> Html.Html Msg
+commentary m =
+    let
+        text =
+            case m.page of
+                Introduction ->
+                    Introduction.mainText
+
+                ErsterTeil ->
+                    ErsterTeil.mainText
+    in
+    Markdown.toHtml [ Html.Attributes.class "markdown" ] text
+
+
+view : Model -> Html.Html Msg
+view m =
+    layout [ Background.color (rgb 0.88 0.88 0.88) ]
+        (row [ width fill, height fill ]
+            [ el [ Background.color (rgb 1 0.5 0.5), width (px 300), height fill ] tableOfContents
+            , el [ Background.color (rgb 0.25 1 0), width fill, height fill ] (Element.html <| commentary m)
             ]
-        , mainMarkdown model
-        ]
-
-
-
--- ---------------------------
--- MAIN
--- ---------------------------
+        )
 
 
 main : Program Int Model Msg
