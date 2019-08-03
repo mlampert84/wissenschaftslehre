@@ -8,7 +8,7 @@ import Url.Parser.Query as Query
 
 
 type Route
-    = Overview
+    = Introduction
     | Commentary (Maybe String)
     | Glossary
     | About
@@ -18,7 +18,8 @@ type Route
 parser : Parser.Parser (Route -> a) a
 parser =
     Parser.oneOf
-        [ map Overview Parser.top
+        [ map Introduction Parser.top
+        , map ErsterTeil (s "erster_teil")
         , map Commentary (s "commentary" <?> Query.string "id")
         , map Glossary (s "glossary")
         , map About (s "about")
@@ -48,7 +49,7 @@ maybeRouteToString route =
 routeToString : Route -> String
 routeToString page =
     case page of
-        Overview ->
+        Introduction ->
             "/"
 
         Commentary Nothing ->

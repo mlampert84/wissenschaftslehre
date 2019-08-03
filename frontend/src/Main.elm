@@ -2,16 +2,15 @@ port module Main exposing (init)
 
 import Browser
 import Browser.Navigation as Nav
-import Commentary.ErsterTeil as ErsterTeil
-import Commentary.Introduction as Introduction
 import Element exposing (..)
 import Element.Background as Background
+import Element.Font as Font
 import Html
 import Html.Attributes
 import Html.Events
 import Markdown
+import Pages exposing (Page(..))
 import Route exposing (Route)
-import Text.TextTypes exposing (Section)
 import Url exposing (Url)
 import Url.Builder
 
@@ -28,11 +27,6 @@ type alias Model =
     }
 
 
-type Page
-    = Introduction
-    | ErsterTeil
-
-
 init : Int -> Url -> Nav.Key -> ( Model, Cmd Msg )
 init flag url key =
     changeRouteTo (Debug.log "the parsed route" (Route.fromUrl url))
@@ -46,7 +40,7 @@ changeRouteTo maybeRoute pushUrl model =
         correctUrl =
             case maybeRoute of
                 Nothing ->
-                    Route.replaceUrl model.navKey Route.Overview
+                    Route.replaceUrl model.navKey Route.Introduction
 
                 otherwise ->
                     Cmd.none
@@ -61,7 +55,7 @@ changeRouteTo maybeRoute pushUrl model =
 
         page =
             case maybeRoute of
-                Just Route.Overview ->
+                Just Route.Introduction ->
                     Introduction
 
                 Just Route.ErsterTeil ->
@@ -103,39 +97,45 @@ update message model =
             changeRouteTo (Route.fromUrl url) False model
 
 
-tableOfContents : Element Msg
-tableOfContents =
+tableOfContents : Model -> Element Msg
+tableOfContents m =
     let
-        mapLink section =
-            link [] { url = "/" ++ section.id, label = text section.title }
+        selected isSelected =
+            case isSelected of
+                True ->
+                    Font.color (rgb255 40 80 200)
+
+                False ->
+                    Font.color (rgb255 0 40 80)
+
+        mapLink page =
+            paragraph []
+                [ link
+                    [ selected (m.page == page)
+                    , mouseOver [ Font.color (rgba255 0 91 150 1) ]
+                    ]
+                    { url = "/" ++ Pages.pageToRoute page, label = text (Pages.pageToTitle page) }
+                ]
     in
-    column []
+    column [ spacing 15 ]
         (List.map
             mapLink
-            [ Introduction.section, ErsterTeil.section ]
+            [ Introduction, ErsterTeil ]
         )
 
 
 commentary : Model -> Html.Html Msg
 commentary m =
-    let
-        text =
-            case m.page of
-                Introduction ->
-                    Introduction.mainText
-
-                ErsterTeil ->
-                    ErsterTeil.mainText
-    in
-    Markdown.toHtml [ Html.Attributes.style "color" "red", Html.Attributes.class "markdown" ] text
+    Markdown.toHtml [] (Pages.pageToContent m.page)
 
 
 view : Model -> Html.Html Msg
 view m =
-    layout [ Background.color (rgb 0.88 0.88 0.88) ]
-        (row [ width fill, height fill ]
-            [ el [ Background.color (rgb 1 0.5 0.5), width (px 300), height fill ] tableOfContents
-            , el [ Background.color (rgb 0.25 1 0), width fill, height fill ] (Element.html <| commentary m)
+    layout []
+        (row [ height fill ]
+            [ el [ width (px 300), height fill, padding 10 ] (tableOfContents m)
+            , el [ Background.color (rgb 0.88 0.88 0.88), width fill, height fill, padding 20 ]
+                (Element.paragraph [ spacing 10 ] [ Element.html <| commentary m ])
             ]
         )
 

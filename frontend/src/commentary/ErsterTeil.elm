@@ -1,14 +1,7 @@
-module Commentary.ErsterTeil exposing (mainText, section)
-
-import Text.TextTypes exposing (Section)
+module Commentary.ErsterTeil exposing (content)
 
 
-section : Section
-section =
-    Section "Grundsätze der gesamten Wissenschaftslehre" "erster_teil" 0
-
-
-mainText =
+content =
     """In this section, Fichte presents the three basic principles that will together form the scaffolding of his entire system.  The three principles are as follows:
 + 'The I sets originally absolutely its own being.'
 + 'A Not-I is absolutely set against the I.

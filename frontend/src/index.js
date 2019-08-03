@@ -1,6 +1,6 @@
 "use strict";
 
-// require("./style/main.scss");
+require("./style/main.scss");
 
 const { Elm } = require("./Main");
 var app = Elm.Main.init({ flags: 6 });

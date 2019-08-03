@@ -1,14 +1,7 @@
-module Commentary.Introduction exposing (mainText, section)
-
-import Text.TextTypes exposing (Section)
+module Commentary.Introduction exposing (content)
 
 
-section : Section
-section =
-    Section "Introduction" "introduction" 0
-
-
-mainText =
+content =
     """
 # The Wissenschaftslehre
 ## A User's Guide
