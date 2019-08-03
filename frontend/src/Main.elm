@@ -11,6 +11,7 @@ import Html.Events
 import Markdown
 import Pages exposing (Page(..))
 import Route exposing (Route)
+import SvgParser
 import Url exposing (Url)
 import Url.Builder
 
@@ -126,7 +127,11 @@ tableOfContents m =
 
 commentary : Model -> Html.Html Msg
 commentary m =
-    Markdown.toHtml [] (Pages.pageToContent m.page)
+    let
+        markdownTexts =
+            String.split "@@" (Pages.pageToContent m.page)
+    in
+    Html.div [] (List.map SvgParser.filterText markdownTexts)
 
 
 view : Model -> Html.Html Msg

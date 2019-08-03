@@ -1,4 +1,4 @@
-module SvgUtils exposing (Dimension, dimensionsToString, dimensionsToViewBox, normalizeFont, toSvgCoord)
+module Svgs.SvgUtils exposing (Dimension, dimensionsToString, dimensionsToViewBox, normalizeFont, toSvgCoord)
 
 import Point2d exposing (Point2d)
 import Svg exposing (Attribute, Svg)

@@ -1,4 +1,4 @@
-module FirstSvg exposing (firstSvg)
+module Svgs.FirstSvg exposing (firstSvg)
 
 import Frame2d exposing (Frame2d)
 import Geometry.Svg as Svg
@@ -6,7 +6,7 @@ import LineSegment2d exposing (LineSegment2d)
 import Point2d exposing (Point2d)
 import Svg exposing (Svg)
 import Svg.Attributes as Attributes
-import SvgUtils exposing (Dimension, dimensionsToString, dimensionsToViewBox, normalizeFont, toSvgCoord)
+import Svgs.SvgUtils exposing (Dimension, dimensionsToString, dimensionsToViewBox, normalizeFont, toSvgCoord)
 import Triangle2d
 import Vector2d
 
