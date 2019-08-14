@@ -24,7 +24,7 @@ The second principle introduces the concept of the Non-self.
 ...dem Ich [wird] schlechthin entgegengesetzt ein Nicht-Ich.
 ~~~
 The idea here is simple: there exists for the self a non-self.  The 'non-self' is quite literally anything that the self is not.  This non-self therefore referes to the world at large.  Whereas my thoughts, actions, and perceptions belong to me, the chair or the table in front of me does not, and is therefore part of the non-self.  Making a sharp distinction between where the self ends and the non-self begins is a tricky business. For example, is one's body part of the self or the non-self?  In the _Grundlage des Naturrechts_ (s.57) Fichte will say that the body belongs to the non-self, since it is not a part of the self's 'selfhood' (_Ichheit_), but it has a specific status vis-a-vis the self as part of the non-self that only the self has jurisdiction over.  We can in general say that the 'Self' is everyting that has to do with the self's exercise of reason, and the non-self is everything else.  John McDowell's distinction between _mind_ and _world_ is helpful here.
-
+[alt-text](/)
 
 ## The third principle
 
@@ -35,9 +35,11 @@ I set in the Self a divisible Non-Self over and against a divisible Self.
  ~~~
 
 A lot is packed into the notion of 'divisibility' here.  We can identify two main aspects of the term.
-1. When something is posited as 'divisible' it is posited not in its entirely, but rather partially, or, as Fichte says, in terms of a certain 'quantity'.  When something is posited to a certain extent, or as a quantity, Fichte says that it is 'limited.'  To posit something partially is to both posit it and limit it, to posit a certain quantity of that thing.  It follows from the fact that the Self and the Not-Self are the only two entities in play that they each limit eachother.  Fichte will elaborate in the _Theortical Part_ on the precise nature of this mutual limitation, but for starters, the reciprocal limitation of the Self and the Non-Self allows Fichte to split the remainder of the _Wissenschaftslehre_ into the _Theoretical_ and the _Practical_.  This is shown in the following diagram:
-@@SVG1@@
-In so far as the Self is limiting the Non-Self, the Self is acting in its capacity as a practical being.  It is acting on the world.  In so far as the Non-Self is limiting the Self, the Self is perceiving the world, it is conforming its perceptions to reality that the world presents it with.
+1. When something is posited as 'divisible' it is posited not in its entirely, but rather partially, or, as Fichte says, in terms of a certain 'quantity'.  When something is posited to a certain extent, or as a quantity, Fichte says that it is 'limited.'  To posit something partially is to both posit it and limit it, to posit a certain quantity of that thing.  It follows from the fact that the Self and the Not-Self are the only two entities in play that they each limit eachother.  Fichte will elaborate in the _Theortical Part_ on the precise nature of this mutual limitation, but for starters, the reciprocal limitation of the Self and the Non-Self allows Fichte to split the remainder of the _Wissenschaftslehre_ into the _Theoretical_ and the _Practical_.  This is shown in the following diagram: [@@SVG1@@]
+ 
+ In so far as the Self is limiting the Non-Self, the Self is acting in its capacity as a practical being.  It is acting on the world.  In so far as the Non-Self is limiting the Self, the Self is perceiving the world, it is conforming its perceptions to reality that the world presents it with.
+
+
 2. When we posit something partially, we assume that it shares something in common with whatever limits it. This Fichte calls this the 'ground of relation' (Beziehungsgrund).  The thing, X, and the thing that limits X, ¬X, must therefore share a common ground that allows them to be set in the first place into relation to one another.  This raises a question that Fichte sets out to answer in the remaineder of the _Wissenscahftslehre_, namely: what is the ground of relation between the Non-Self and the Self. What is it that they share in common, that allows them come in contact with one another in the first place and thereby limit each other?
 
 ## The remainder of the _Wissenschaftslehre_
