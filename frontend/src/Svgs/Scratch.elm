@@ -1,4 +1,4 @@
-module Scratch exposing (bottomSplits, firstLevelLine, firstSplit, secondLevelLines, secondSplit, secondSplitHeight, thirdLevelLines, thirdSplitHeight, thirdSplits)
+module Svgs.Scratch exposing (bottomSplits, firstLevelLine, firstSplit, secondLevelLines, secondSplit, secondSplitHeight, thirdLevelLines, thirdSplitHeight, thirdSplits)
 
 
 type Node
