@@ -1,4 +1,4 @@
-module ESynthesis exposing (diagram)
+module Svgs.ESynthesis exposing (diagram)
 
 import Svg exposing (..)
 import Svg.Attributes as Attributes exposing (..)
