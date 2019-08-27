@@ -18,7 +18,7 @@ Fichte's investigation in the _Theoretical Part_ is highly structured.  In order
 *Form
 *Matter
 
-Each of these concepts isolate some aspect of mind-world interaction.  They are, however, most useful in the investigation when used in combination with one another.  The six concepts divide into three pairs, each of which belongs to its own tier.  Form and matter below to the tier of sensuousness. They concerns the sensuous nature of mind-world interaciton, the fact that mind perceives the world as consisting of matter that takes on various forms.  The second tier is the dynamic tier. The third is the categorical tier.
+Each of these concepts isolate some aspect of mind-world interaction.  They are most useful in the investigation when used in combination with one another.  The six concepts divide into three pairs, each of which belongs to what we can call its own tier.  Form and matter belong to the tier of sensuousness. They are concerned with the sensuous nature of mind-world interaciton, the fact that the mind perceives the world as consisting of matter that takes on various forms.  The second tier we can call the dynamic tier. The third we can call the categorical tier.
 
 
 ## The tendency of _The Theoretical Part_
