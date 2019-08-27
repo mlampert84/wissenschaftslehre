@@ -62,6 +62,9 @@ changeRouteTo maybeRoute pushUrl model =
                 Just Route.ErsterTeil ->
                     ErsterTeil
 
+                Just Route.TheoretischesTeil ->
+                    TheoretischesTeil
+
                 _ ->
                     Introduction
     in
@@ -121,7 +124,7 @@ tableOfContents m =
     column [ spacing 15 ]
         (List.map
             mapLink
-            [ Introduction, ErsterTeil ]
+            [ Introduction, ErsterTeil, TheoretischesTeil ]
         )
 
 

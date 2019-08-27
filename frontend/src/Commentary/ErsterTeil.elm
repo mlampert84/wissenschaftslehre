@@ -52,7 +52,7 @@ At the conclusion of the _Theoretical Part_ Fichte describes a kind of journey, 
 
 
 In the following diagram, we overlay the various principles of the _Groundwork_ on top of the journey, so that the reader can see how the principles together render this final picture of Fichte's philosophy:
-@@SVG3@@
+
 
 ## What does it mean to posit, anyway?
 

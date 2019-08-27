@@ -13,6 +13,7 @@ type Route
     | Glossary
     | About
     | ErsterTeil
+    | TheoretischesTeil
 
 
 parser : Parser.Parser (Route -> a) a
@@ -20,9 +21,7 @@ parser =
     Parser.oneOf
         [ map Introduction Parser.top
         , map ErsterTeil (s "erster_teil")
-        , map Commentary (s "commentary" <?> Query.string "id")
-        , map Glossary (s "glossary")
-        , map About (s "about")
+        , map TheoretischesTeil (s "theoretisches_teil")
         ]
 
 
@@ -66,3 +65,6 @@ routeToString page =
 
         ErsterTeil ->
             "erster_teil"
+
+        TheoretischesTeil ->
+            "theoretisches_teil"
