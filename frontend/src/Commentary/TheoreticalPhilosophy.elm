@@ -41,13 +41,13 @@ This explains the first division at the top of the diagram.  The next division c
 
 Fichte now applies these two concepts to the two concepts of causality and substance so as to now describe four different aspects at play in the _Theoretical Principle_.
 
-* Causal exchange: 
+* Causal exchange: As one would imagine it.
 
-* Causal independent activity:
+* Causal independent activity: Activity of the Non-Self.
 
-* Substantial exchange:
+* Substantial exchange: A second state comes in that negates the totality of the first state.
 
-* Substantial indendendent activity:
+* Substantial indendendent activity: Imagination.  Comparing the signle state to the shared state.
 
 The last step involves introducing the formal and material aspects of these four aspects.
 Fichte defines form and matter in a very abstract manner.
