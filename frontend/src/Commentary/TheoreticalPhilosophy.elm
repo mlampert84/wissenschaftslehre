@@ -15,11 +15,56 @@ Fichte's goal is this section is to figure out how the _Theoretical Principle_ i
 
 Fichte takes this contradiction to be his formulation of the contradiction between realism and idealism.  A realist would say that the Non-Self is ultimately the cause of the Self taking itself to be determined by the Non-Self.  An idealist would argue that in fact the Self is determining or causing the determination, or limitation, that the Non-Self appears to be imposing on the Self.  In this latter case, the _Theoretical Principle_ is a case of Self-determination, in the former, the Self is being determined by something outside itself, namely the Non-Self.
 
-In order to resolve this contradiciton between realism and idealism, Fichte uses a two-step prodecure consisting of an analytical phase followed by a synthetic phase.  In the analytic phase, Fichte distinguishes between the idealist and realist aspects at work in the interaction between Self and Non-Self.  In the synthetic phase, Fichte first plays the aspects out against each other, considering first the idealist scenario in which the idealist aspect explains, or forms the ground of, the realist aspect, and then considering the realist scenario in which the opposite is the case. Then Fichte considers the third possibility in which the idealist and realist aspects mutual determine one another.  It is always this third scenario of mutual determination that moves Fichte closer to the account he holds to be correct.  With each successive synthesis, new details emerge about his account until finally culminating in the theory of the check.
+In order to resolve this contradiciton between realism and idealism, Fichte uses a two-step procedure consisting of an analytical phase followed by a synthetic phase.  In the analytic phase, Fichte distinguishes between the idealist and realist aspects at work in the interaction between Self and Non-Self.  In the synthetic phase, Fichte plays out the aspects out against each other, considering first the idealist scenario in which the idealist aspect explains, or forms the ground of, the realist aspect, and then considering the realist scenario in which the opposite is the case. Then, to conclude the synthetic phase, Fichte considers the third possibility in which the idealist and realist aspects mutual determine one another.  It is always this third scenario of mutual determination that moves Fichte closer to the account he holds to be correct.  With each successive synthesis, new details emerge about his account until finally culminating in the theory of the check.
 
 ## An example analysis and synthesis
 
-Before we take a look at how Fichte lays out his various analyses and syntheses, it helps to consider just one such analysis and synthesis in order to get a more concrete sense of how such a process works.  The analysis we will consider is the distinction between form and matter under the concept of causality.  In this analysis, Fichte is assuming that the Self and Non-Self stand in a relationship of efficient causality, where the Non-Self is acting causaly on the Self such that the Self takes itself to be determined.  The analysis consists in identifying the formal and the material aspects of such an interacting...(describe them)
+Before we take a look at how Fichte lays out his various analyses and syntheses, it helps to consider just one such analysis and synthesis in order to get a more concrete sense of how such a process works.  The analysis we will consider is the distinction between form and matter under the concept of causality.  In this analysis, Fichte is assuming that the Self and Non-Self stand in a relationship of efficient causality, where the Non-Self is acting causally on the Self.  The analysis consists in identifying the formal and the material aspects of such an interaction.
+
+In the _Theoretical Part_, we can very roughly say that the term __matter__ represents that which resides in an entity, whereas __form__ signifies the link or concantenation of entities into a larger unity.  Thus, in identifying the 'matter' of causal interaction, we have to ask: what resides in the Self and the Non-Self such that the Non-Self can causally affect the Self?  Fichte's answer here is that this matter has to be an activity of the Non-Self.  The affectation of the Self by the Non-Self cannot come from the Self itself, because this would mean that the Self is the origin of its own passivity, or suffering.  Fichte rejects such a possibility, on the grounds of his first principle, which says that the Self posits its own being. Any negation of its being must therefore come from outside the Self.
+
+To identify the __form__ of the interaction between Self and Non-Self, we have to ask how it is that the Self and the Non-Self are even brought into a relationship of causality in the first place.  Fichte answers here that such a connection is possible because the Self __transfers__ its activity to the Non-Self.  By transfering its own activity over to the Non-Self, the Self is removing some of its activity from its purview and attributing that activity to the Non-Self.  This Self relates its passivity to the Non-Self's activity because both pieces of the puzzle result from one and the same act, namey the Self's act of attributing some of its own activity to the Non-Self.
+
+These derivations of form and matter are, admittedly, difficult to grasp, but we can perhaps gain a better understanding of what Fichte is doing here by recalling Kant's distinction between the matter of sensibility and the form of concepts.  According to Kant, the subject unifies a manifold of intuition by applying the form of a concept.  Here, the matter is the manifold, and the form is the concept.  We can undertanding Fichte here to be taking taking the matter and its unification under a concept apply not to objects of experience, but rather to the Self and the Non-Self themselves.  
+
+(Here the concept of causaity and the matter of causality refers not to an object of cognition, but to the Self and the Non-Self in general.)
+In Fichte's case the Self is taking itself to be causally determined by the outside world. The world provides the matter of cognition by affecting the Self, whereas the Self, in __taking__ itself to be causality determined, is applying the concept, or __form__, of causality
+As difficult and perhaps dubious as these derivations of _form_ and _matter_ might seem, they put Fichte in a position to 
+
+
+
+
+The Self connects the the In order for this to happen, we, or some other intelligent being, has to connect the passivity or limitation observed in the Self with the activity observed in the Non-Self.  Only when this connection happens do we identify the activity of the Non-Self as the efficient cause of the passivity of the Self.      
+
+
+The unity, or form, of causal interaction consists in recognizing that two apparently distinct things, i.e. the Self's passivity and the Non-Self's activity, are in fact two aspects of one single event, namely a causal affection of the Self on the part of the Non-Self.  Fichte's 
+
+
+ and not the negation of its being. that the Self can only be the source of its own activity.   of the  the questoin Fichte identifies the matter of eff.
+
+For the Fichte identities the 'matter' of causal interaction between The 'matter' of the In the fact of a the 
+
+
+The material of the interaction consists in an activity of the Non-Self, while the form of the interaction consists in the Self transfering its activity to the Non-Self.
+
+
+Fichte's derivation of the material and form aspects of the interaction works as follows.  If we assume that the Non-Self is causally affecting the Self, then this requires two pieces: an initial activity of the Non-Self that is doing the affecting, and a passivity, or suffering of the Self that is the result of this activity of affection.  The matter is here that which both pieces have in common, namely, the activity of the Non-Self, for the activity that begins with the Non-Self, carries over into the Self and thereby determines the passivity we observe in the Self.  Another way to say this is that both Self and Non-Self are permiated by a single activity that originates in the Non-Self.  Whereas the __material__ of the interaction refers to some common characteristc that both Self and Non-Self share, the __form__ of the interaction refers to 
+
+ describes how the alleged distinction between passive Self and active Non-Self emerge from one single act
+
+
+, the _form_ of the interaction picks out the cognitive act involved in linking the observed passivity of the Self with the activity of the Non-Self.  The form of the interaction describes how unity The Self's passivity and the Non-Self's activity are not two separate events, but rather separate perspectives on one single event.  The Self's passivity Fichte reasons that because we are dealing with a congnitive act here, the form of interaction must be an 
+
+We, or the Self, can cognitively associate the Self's passivity with the Non-Self's activity because we see that they are two aspects of a single phenomonen.  The Self's passivity is how the the Non-Self's activity expresses itself in the context of the Self. The converse is also true: the Non-Self's activity is how the Self's passivity expresses itself in the context of the Self.  
+
+The form of the interaction consists in linking the observed passivity of the Self with the activity of the Non-Self.
+
+
+observed
+According to Fichte,  
+
+
+* In order for these two pieces, the activity of the Non-Self, and the passivity of the Self, to be connected to one another, i.e. parts of one and the same action, there must be a common medium, or substrate that allows the activity of the Non-Self to carry over into the Self as passivity, or suffering of the Self. If there wasn't such a common ground, then there is no reason that the activity outside the Self, i.e. in the Non-Self, would carry over into the Self, where it becomes manifest as the Self's passivity, or suffering.  The substrate, which subtends both the active Non-Self and the passive Self, is what Fichte calls matter.  This matter has the characteristic that it is imbued with an activity that explains both the activity of the Non-Self and the effect of suffering, or  
 
 In the synthesis phase...
 
