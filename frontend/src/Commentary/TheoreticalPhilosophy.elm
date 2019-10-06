@@ -38,6 +38,27 @@ We thus have here an example of an analysis and synthesis of the __Theoretical P
 
 ## The system of analyses and syntheses
 
+In the previous section, we described how the form and matter of causal interaction form the idealist and realist sides, respectively, of the __Theoretical Principle__.  These complementary concepts of form and matter allow us first to split, or analyse the __Theoretical Principle__ into two separate, conflicting parts, and then use the complementary nature of the leading concepts to find a synthesis that leads to an understanding of how theoretical knowledge is possible.  The entirety of the _Theoretical Part_ of the _Wissenschaftslehre_ consists of several analyses and their accompanying syntheses, whose arrangement and interrelation to one another are the subject of this section.
+
+Fichte identifies a total of three different pairs of complementary concepts that he believes come to bear on _Theoretical Principle_.  In addition to the distinction between form and matter, Fichte singles out the distinction between causality and substance as one such pairing, and also the distinction between what we can call empirical and transcendnetal interaction.  These three analyses do not occur separately, but are rather additive, in the sense that every side of each analysis combines all the other concepts of the other analyses. What this means concretely is that Fichte begins by distinguishing between causal interaction and substantial interaction, the former which leads to a realist understanding of the _Theoretical Principle_, the latter to an idealist understanding.  Having made that distinction, he then further distinguishes between two types of causal interaction, and two types of substantial interaction.  Causal interaction can be applied to the transcendental entities of the Self and the Non-Self, and to regular empirical objects.  The same holds true for substantial interaction.  When we are in the realm of trascendedental interaction, we are taking an idealist view of things, and when we are in the empirical realm, we are viewing things as a realist would.  Finally, each of these four types of interactions divides into their formal and material aspects, so that we end up with a total of four separate distinctions between form and matter: @@Image@@
+
+The analysis that we handled in the previous section is thus in fact the analysis of form and matter under the concept of transcendnetal causal interaction.  As can be seen from that example, it is always the most immediate analysis, so in this case the form-matter distinction that determines if we are dealing with an idealist or a realist view of things.
+
+Just as the analyses are cumulative, so are the syntheses.  The synthesis stage consists in cumulatively synthesizing each finer analysis into a synthesis, and then synthesizing those syntheses into larger syntheses.  So, for example, the form and matter or causal trascendental interaction are synthesized. Then the form and matter of causal empirical interaction are synthesized. Then, the synthesized notion of transcendental causal interaction is synthesized with the synthesizedntion of empirical causal interaction.  Interestingly, Fichte does not provide a final synthesis of causal and substantial interaction, and one can speculate on whether this is an oversight on his part, or if he perhaps has a good reason for doing so. Regardless of this open question, we can observe the clear tendency of these successive analyses and syntheses.  With each analyses, Fichte is able to isolate a separate aspect of his _Theoretical Principle_, and with each synthesis, he is able to move toward his final monist theory of the check.
+
+## The significance of the system of analyses and syntheses
+
+We will look at each analysis and synthesis later on.  Before going into that level of detail, however, it is helpful to consider the larger significance of this particular arrangement that Fichte chooses.  Nowhere else in his writings does Fichte proceed in such an ordered fashion.  His strict adherence here to the three pairs of complementary concepts is reminiscent of Kant's strict orientation around the table of cateogies in the _Critique of Pure Reason_.  There can be no doubt that Fichte considers these six concepts to be the cornerstones of his theoretical philosophy.  We can perhaps best describe the overall tendency of the _Theoretical Part_ by summarizing the significance that each of these three pairs of concepts have in the monist philosophy that gradual emerges in the course of the process of synthesis.
+
+
+
+
+
+
+
+
+ In fact, however, the synthesis of form and matter under the concept of efficient causality contains itself a realist assumption, namely that the Non-Self is causally affecting the Self.  As a complement to the realist concept of efficient causality, Fichte introduces the concept of substance.
+
 The analysis and synthesis covered in the previous section made a number of assumptions  
 
 
