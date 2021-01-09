@@ -6,19 +6,55 @@ The picture that emerges in Fichte's theoretical philosophy as a response to thi
 -Empirical judgement has a grip on objective reality because every empirical judgement can err.
 -The feature of empirical judgement that allows for it to err is negation. Any empirical judgement (and indeed judgement in general) can be described as either the affirmation or negation of a proposition.
 -Affirmative and negative judgement are intimately connected.  We can say that negation that dwells within every affirmative judgement and thereby secures the falsifiability of our empirical judgements. In other words, falsifiability is immanent to every empirical judgement because negation is immanent to every assertoric proposition.
--The ability to consider both a proposition and its negation is secured by a capacity that Fichte calls the imagination (Einbildungskraft).
+-The cognitive feature that tethers negation to all propositions such that negation dwells as an possibility within that proposition Fichte calls imagination (Einbildungskraft).
 
 Equally important to understanding Fichte's theoretical philosophy is to understand what Fichte demarcates as not explained in his theory.
 -The consciousness, or mind, is the source of judgement. Since these judgements don't have a mechanical origin, as would be the case, for example, if consciousness were determiend by efficient causes, there is no explanation for how empirical judgements arise. They simply do.
--Even though Fichte is out to show that empirical judgement is, by its very nature, negatable, he has no explanation for how, in actuality, incorrect empirical judgements are corrected. He theory ends with two irreconcible possibilities to explain this, namely, 1) a self-correcting, spontaneous capacity of mind to correct false judgements, or 2) an external check (Anstoss) on, or resistence (Wiedestand) to, false judgement that somehow induces the mind to correct its false judgement.
+-Even though Fichte is out to show that empirical judgement is, by its very nature, negatable, he has no explanation for how, in actuality, incorrect empirical judgements are corrected. His theory ends with two irreconcible possibilities to explain this, an "idealist" and a "realist" position. The idealist position explains empirical judgement via a spontaneous and self-correcting capacity of mind that has a concept of false judgements and an ability to correct them. The realist position explains empirical judgement via an an external check (Anstoss) on, or resistence (Wiedestand) to, spontaneously generated false judgement that somehow induces, or causes, the mind to correct its false judgement.
 
 The remainder of this essay consists in fleshing out this initial summary of Fichte's theoretical philosophical by going through key passages in his text.
 
 Exegetical Note
 
-In the Foundation of Theoretical Knowledge, Fichte only occasional mentions judgements and negation. Thus it might seem that viewing this text through such a lense must inevitably distort it. However, we believe that framing his investigation in terms of judgement and negation simplifies and concretizes a very complex and abstract investigation that otherwise remains beyond our grasp. As we will see, many of Fichfe's distictions and arguments begin to make sense when presented in our interpretive terms.
+In the Foundation of Theoretical Knowledge, Fichte only occasionally mentions judgements. Thus it might seem that viewing this text through such a lense must inevitably distort it. However, we believe that framing his investigation in terms of judgement and negation simplifies and concretizes a very complex and abstract investigation that otherwise remains beyond our grasp. As we will see, many of Fichfe's distictions and arguments begin to make sense when presented in our interpretive terms.
 
-Six different views on negation
+The Basic Setup
+
+Fichte presents his theoretical philosophy as the unfolding of a single foundational principle:
+
+```
+Das Self posits itself as determined by the Non-Self.
+```
+
+We can make sense of this principle in the context of empirical judgements. According to this interpretation, the "Self" refers to the agent who judges, and the "Non-Self" refers to an empirical reality to which this agent's judgements are directed. To say that the Self posits itself as determined by the Non-Self is to say that our judgings take as their measure of correctness the state of affairs in the empirical world. But how are our judgements about empirical reality correctable if all judging springs from the Self? The determination that a judgement is correct or incorrect is itself a judgement, that would in turn require another judgement to determine its correctness, as so on ad infinitum. The self-sufficient nature of judging, what Fichte captures with his, admittedly broader and fuzzier concept of positing, seems to leave no room for determination 'from outside'.
+
+And yet, as Fichte is noting in his foundational principle of theoretical knowledge, we take our judgements about empirical reality to be objective. Our judgements about reality are valid not because they come from us, but because they conform to reality.
+
+In order to consider how it is possible for reality to weigh in on our judgements, Fichte introduces the concept of "interdetermination" or, as he calls it later, an "exchange of activity and suffering". This phenomenon is none other than the principle of non-contradiction in disguise. The principle of non-contradiction says that two contradictory principles cannot at the same time hold. In Fichte's terminology, the "reality" of Thing 1 implies the "negation" of Thing 2, and, visa versa, the "reality" of Thing 2 implies the "negation" of Thing 1.
+
+Fichte calls this "interdetermination" because one can use the reality of one thing to determine the negation of another. Similarly, this is an "exchange of activity and suffering" because the "reality" or "activity" of one thing, "transfers over" or "exchanges" in the "negation" or "suffering" of that other thing.
+
+Reality manifests its ability to determine our judgements when when we take our judgements to be false. In taking a judgement to be false, we have to give up the previous judgement that we first took to be true. This act of reliquishing our previous judgement for the negation of that judgement is dictated by the principle of non-contradiction, when doesn't permitt us to simultaneously hold to our old proposition p and our new proposition not-p, but rather compels us in accepting not-p to reject p.
+
+In Fichte's terms, empirical reality, or the Not-Self, is the that which negates our propositions, and, in so doing, allows the true propositions to stand and the false onces to fall. Each and every time that a particular judgement of ours is show to be mistaken, the general rolea of the Self and Non-Self, the judging subject and the objective world are themselves exhibited writ large. The self makes a judgement p, and reality says whether or not it will stand.
+
+This relationship between the particular negation of a judgement, on the one hand and, other the other, the general relationship of the judging subject to reality, explains why we see Fichte present his notion of "exchange" in different guises. In the beginning of the Theoretical Part, Section B, Fichte describes the exchange between the Self and the Not-Self as negating reality in the Self, in general, and not negating the reality of a specific judgement. ("So viele Teile der Negation das Ich in sich setyt, so viele Teile der Realitaet setzt es in das Nicht-Ich"). What does it mean to negate part of the reality of the Self? If we consider the Self as the totality of its judgements, then a negation of some of these judgements would be a the partial negation of the Self that Fichte is talking about. This general view of the Self, however, is replaced later on in Section E, when Fichte discusses the "exchange" as relating not to the judgings of the Self, in general, but rather specific judgements. At this later point in his investigtion, Fichte is still interested in the general case of the judging Self and the correcting Non-Self, but we introduces a new term, namely an "independent activity" of the Self and the Non-Self that grounds, or explains the particular case of a "Wechsel" or, as we are calling it, the negation of a particular judgement. In the following section we examine this distinction between the general and particular case of negation more closely, as well as two other distinctions Fichte makes concerning the case of negation.
+
+Gradual Refinement
+
+As we mentioned in the introduction, Fichte holds that we lack a complete explanation for empirical judgement, or theoretical knowledge, but can at least reduce our explanation to two irreconcilable positions. One position is idealist, explaining the correction of false empirical judgement through some version of a spontaneous capacity, while the other position is realist, explaining the correction of judgement through some kind of external determination. The majority of the Theoretical Part is concerned with outlining these two positions through a process of gradual refinement. In the process of gradual refinement, Fichte begins by trying to distinguish various idealist aspects of the process of negation from relatist aspects. Fichte calls this process of drawing these distinctions "analysis". Then, in a second process that he calls "sythesis", Fichte plays the distinctions between the idealist and realist aspects of negation off against one another. In working out how these positions contradict one another and searching for their reconciliation, Fichte moves gradually from a position where idealism and realism are in complete opposition to one another, to one in which their differences are confined to a very specific moment of empirical negation, namely the moment that in which the Self chooses the negation of the proposition over its affirmation.
+
+Analysis
+
+Fichte distingisuhes three times between the idealist and realist aspects of negation.
+
+Semantics of negation (negation as consisting of parts or a whole)
+Scope of negation (particular versus general)
+Abstraction level of negation (form and matter)
+
+Before we reconstruct Fichte's process of synthesis, which is where the meat of his argument is, we need to make at least a casual acquintance with the distinctions between the idealist and realist aspects
+
+Synthesis of Negation
 
 Various theories on empirical judgement
 
