@@ -75,6 +75,8 @@ Fichte characterizes the mere act of "exchange" as a realist position, because t
 
 Form and Matter
 
+The distinction that Fichte draws between from and matter can appear very slippery upon close reading of his text. Our interpretation of the Theoretical Part as a text about negation, however, allows us to simplify this distinction as one between negation as a formal operation on the one hand, and a meaningful operation on the other. Looked at as a formal operation, a proposition is negated through the addition of a negating particular, such as the addition of "Not" to "p". According to this formal view, any and every proposition of the form "p" can be negated through the merely addition of a the particle of negation.
+
 (The form of judgement and that to which a judgement referes.)
 
 Synthesis
