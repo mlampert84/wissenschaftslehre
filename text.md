@@ -10,7 +10,7 @@ The picture that emerges in Fichte's theoretical philosophy as a response to thi
 
 Equally important to understanding Fichte's theoretical philosophy is to understand what Fichte demarcates as not explained in his theory.
 -The consciousness, or mind, is the source of judgement. Since these judgements don't have a mechanical origin, as would be the case, for example, if consciousness were determiend by efficient causes, there is no explanation for how empirical judgements arise. They simply do.
--Even though Fichte is out to show that empirical judgement is, by its very nature, negatable, he has no explanation for how, in actuality, incorrect empirical judgements are corrected. His theory ends with two irreconcible possibilities to explain this, an "idealist" and a "realist" position. The idealist position explains empirical judgement via a spontaneous and self-correcting capacity of mind that has a concept of false judgements and an ability to correct them. The realist position explains empirical judgement via an an external check (Anstoss) on, or resistence (Wiedestand) to, spontaneously generated false judgement that somehow induces, or causes, the mind to correct its false judgement.
+-Even though Fichte is out to show that empirical judgement is, by its very nature, negatable, he has no explanation for how, in actuality, incorrect empirical judgements are corrected. His theory ends with two irreconcible possibilities to explain this, an "idealist" and a "realist" position. The idealist position explains empirical judgement via a spontaneous and self-correcting capacity of mind that has a concept of false judgements and an ability to correct them. The realist position explains empirical judgement via an an external check (Anstoss) on, or resistence (Wiederstand) to, spontaneously generated false judgement that somehow induces, or causes, the mind to correct its false judgement.
 
 The remainder of this essay consists in fleshing out this initial summary of Fichte's theoretical philosophical by going through key passages in his text.
 
@@ -46,7 +46,7 @@ As we mentioned in the introduction, Fichte holds that we lack a complete explan
 
 Analysis
 
-Fichte distinguishes three times between the idealist and realist aspects of negation, result in a total what we can call six "categories" of negation. We can summarize them in the following table, before describing them in more detail:
+Fichte distinguishes three times between the idealist and realist aspects of negation, resulting in a total of what we can call six "categories" of negation. We can summarize them in the following table, before describing them in more detail:
 
 |                                                                       | Idealist             | Realist   |
 | --------------------------------------------------------------------- | -------------------- | --------- |
@@ -75,16 +75,54 @@ Fichte characterizes the mere act of "exchange" as a realist position, because t
 
 Form and Matter
 
-The distinction that Fichte draws between from and matter can appear very slippery upon close reading of his text. Our interpretation of the Theoretical Part as a text about negation, however, allows us to simplify this distinction as one between negation as a formal operation on the one hand, and a meaningful operation on the other. Looked at as a formal operation, a proposition is negated through the addition of a negating particular, such as the addition of "Not" to "p". According to this formal view, any and every proposition of the form "p" can be negated through the merely addition of a the particle of negation.
+The distinction that Fichte draws between from and matter can appear very slippery upon close reading of his text. Our interpretation of the Theoretical Part as a text about negation, however, allows us to simplify this distinction as one between negation as a formal operation on the one hand, and a meaningful operation on the other. Looked at as a formal operation, a proposition is negated through the addition of a negating particle, such as the addition of "Not" to "p" to yet "Not-p". According to this formal view, any and every proposition of the form "p" can be negated through the mere addition of a the particle of negation. Because this formal operation of negation is a operation of judgment, it is executed by the Self who judges and is therefore idealist. In contrast, the matter of negation is that which determines the meaning of a judgement and its negation, and therefore determines whether or not the negation accords with reality. The material aspect of negation is realist because it is the reference to the way things really are, to the empirical reality that makes judgements true or false.
 
-(The form of judgement and that to which a judgement referes.)
+Fichte's six categories in action
+
+The final distinctions that Fichte draws in his process of analysis are not the six categories outlined above, but rather specific combinations of these six categories, as illustrated in this diagram.  
+[Diagram]
+Fichte works very methodically to combine each category from one type of distinction with two other categories from the two other types of distinctions. Thus, for example, he isolates how the form of negation functions within contextual frame of causal negation, and distinguishes this from the matter of negation within the contextual frame of causal negation. As the diagram makes clear, Fichte is exhaustive in his combinatoric logic; he dutifully walks through every single possible combination. For the purposes of expposition, we summarize his characterizations of each of these aspects along with how we understand it through our interpretation frame of negation:
+
+-Form, the contextual frame of negation, causal negation:
+-"a transfer, a positing through a not-positing".
+-The Self transfers authority for the correctness of its judgements over to empirical reality. By ackowledging its judgement to be incorrect, the Self acknowledges not itself, but rather emprical reality as the standard of correctness. It negates its own judgement (this negation of judgement is the "not-positing") and attributes the correctness of negating this judgement to the state of affairs in the real world (i.e. "positing reality in the Not-Self).
+-Matter, the contextual frame of negation, causal negation:
+-"a independent activity of the Not-I".
+-The Self's judgement is negated by virtue of a the sate of affairs in empirical reality.  In other worlds, empirical reality directly causes the negation of judgement within the Self.
+-Form, single act of negation, causal negation:
+  -"the mere mutual enmeshment of the exchanging parts", "a coming to be by means of ceasing to be"
+  -According to Fichte's notion of causal negation, the judgement p and its negation Not-p are seen as two separate judgements (here the "alternating parts") that nevertheless repel one another so that one of the judgements holding means that the other cannot hold.  The formal operation of negating p to form  "Not-p" introduces a new judgement, namely "Not-P", which, in coming to being, necessarily means that p ceases to be.  
+-Matter, single act of negation, causal negation:
+ -"that in both parts which makes it so that both parts can and must be enmeshed in one another", "being in their essence contrary".
+ -Matter refers to the state of affairs to which judgements refer. The matter of negation within the theory of causal negation says that two states of affairs negate one another if they cannot both hold, which is another way of saying that the two states of affairs are "in the essense contrary" to one another.   
+-Form, the contextual frame of negation, substantial negation:
+    -"That which is not posited should be, in fact, posited; it should be posited as not posited." "excluding [something] from a determined, fulfilled, and in this respect total sphere."
+    -
+-Matter, the contextual frame of negation, substantial negation:
+    -"a higher sphere with contains both the determined and the undetermined sphere"
+    -
+-Form, single act of negation, substantial negation:
+    -"mutual exclusion of the exchanging  parts from the absolute totality"
+    -In contrast to the form of causal negation, a judgement "Not-p" does not cause "p" to cease to be, but merely 'excludes' it from the sphere of judgements one is holding.  This sphere of judgements one holds to be true about a particular substance Fichte calls "absolute totality".  Since Fichte eventually rejects the idea that there are any substances in empirical reality, we can simply describe this "absolute totality" as judgements one makes.  When Not-p replaces p as the judgement one is making, the judgement p still exists in some sense in the realm of possible judgements, though it is nevertheless not held to be true.  The same applies visa versa to p replacing Not-p.  Not-p still exists as a possible judgement, even if it is replaced by p.
+-Matter, single act of negation, substantial negation:
+    -"the determinability of totality"
+    -The idea here is that emprical reality stays the same as a point of reference, even as the Self makes and corrects its judgements concerning what is the case in this empirical reality.  Fichte distinguishes here between two different moments in the process of judgeming, first "the absolutely posited and determined totality" of a substance and, second, the "determinable totality arising from the determined totality and that which has been excluded."  This is rather convoluted language for a rather simple point.  The first moment is a judgment one makes, say p.  It is "absolutely posited" because Fichte thinks that judgement is spontaneous, and it is "determined" become it is a completed judgement.  The second moment includes both the judgement one has made, p, and the judgement one has thereby excluded, Not-p (Fichte uses the example of two different judgements that exclude one another, namely rest and motion, but it is easier to think in terms of simple negation).  Even though one makes a judgement p, one holds open, in making that judgement, that p could be false, Not-p.  Indeed, the judgement p contains within itself the possibility of Not-p. The operation of negation is always at hand for the judging Self, without any further determination of empirical reality.  Fichte wants to mark out here that when a judgement is negated, the thing to which the judgement refers does not cease to be, but rather gets determined again by the correcting judgement. The "totality" of a substance in emprical reality (Fichte's example of a substance is a piece of iron, even though he will rather explain that there are not substances in empirical reality, only accidences, and that corresponds to our notion of discrete judgements), i.e. the set of judgements that can apply to it, is "determinable" .  The thing one is judging can contain p as well as Not-p, and, regardless of whether p or Not-p holds, maintains its status as the thing that a subject is trying to determine.  Once Fichte, in the course of his investigation, rejects the idea of substances existing in empirical reality, the matter of substantial negation becomes not this or that object in empirical reality, but empirical reality in general. 
 
 Synthesis
+
+Now that we have outlined the elements of analysis, we are in a position to understand Fichte's process of synthesis. Similar to how one might try to undestand how a watch works by taking it apart and putting it back together, Fichte, after having made his many distinctions between the aspects of negation in the analysis section, seeks in the synthesis section to describe how all of these parts work in tandem. As we can see from the our discussion of Fichte's analysis, the various parts of corrected, or negated judgement, fall into one of two groups: they are either idealist or realist. The unsurmountable difficulty in figuring out how the parts of negated judgement fit together is that idealism and realism do not fit neaitly together in a theory of judgement; they are inherently at odds with one another. And yet, according to Fichte, theoretical knowledge would not be possible if there was not both an idealist and a realist dynamic at work. In order to consider how the idealist and realist dynamics can both be equally activity in the act of negated judgement, Fichte first considers the two senarios in which they are not equally active. In the first scenario, the idealist dynamic is the prime mover, and the realist dynamic is only an illusory effect of the idealist dynamic. In the second scenario, the realist dynamic is the actual dynamic that creates the appearance of an idealist dynamic. After considering these two possibilities, Fichte then outlines the third possbility in which both the idealist and realist dynamic are equally involved in the process of negated judgement, and in fact, work together in some way to allow for the objectivity of empirical judgement.
+
+With each synthesis, Fichte approaches his final account of theoretical knowledge. On the idealist side, Fichte gradually revises the account from an account in which the Self's judgements are simply sponteanous acts dictated by internal principles free of any external control, to one in which judgements are shown to have, in their very structure, a mechanism for correction in the form of negation that makes them receptive to external feedback. On the realism side, Fichte gradually revises the account from a fully deterministic account in which all judgement is part of a chain of efficient causality, to an account in which external determination is limited to some minimal resistance, or check, that induces the Self to correct its judgement by itself.
+
+
+We outline the various position in this chart, and then summarize them below.
+
+(Qualitative Idealism, Quantitative Realism, Quantitative Realism, Quantitative Idealism, critical idealism)
+
+---
 
 This processs is used to bring out the final picture that Fichte draws of negation. It always contains three steps, that we also is the final picture of negation - the idealist argument, the realistic argument, and their unity.
 
 Various theories on empirical judgement
-
-(Qualitative Idealism, Quantitative Realism, Quantitative Realism, Quantitative Idealism, critical idealism)
 
 Conclusion
